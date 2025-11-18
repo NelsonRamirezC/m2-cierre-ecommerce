@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,12 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
+    <script defer src="./assets/js/logica_alert.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -38,9 +44,76 @@
         </div>
     </nav>
 
-    <header class="py-3">
+    <header class="py-5">
         <h1 class="text-center">Detalles del producto X</h1>
     </header>
-    
+
+    <main class="container">
+        <section class="encabezado-detalle">
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col encabezado-detalle-imagen">
+                    <img src="https://picsum.photos/id/684/800/800" class="img-fluid" alt="Producto 1"
+                        onerror="this.onerror=null;this.src='https://placehold.co/400x300';">
+                </div>
+                <div class="col encabezado-detalle-info">
+                    <p class="fs-3">Descripción: Producto que sirve para...</p>
+                    <p class="fs-3">Precio: <span class="text-success fw-bold">$4.500</span></p>
+                    <div class="py-3">
+                        <a href="#" class="btn btn-success" id="liveAlertBtn">Agregar</a>
+                    </div>
+
+                    <div id="liveAlertPlaceholder"></div>
+                    
+                </div>
+
+            </div>
+        </section>
+
+        <section class="carecteristicas-detalle py-3">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Características técnicas
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Detalles técnicos del producto...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Recomendaciones de uso
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Este producto es recomendado para...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Formas de entrega
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Detalles sobre las formas de entrega</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 </body>
+
 </html>
